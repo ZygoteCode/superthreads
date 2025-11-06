@@ -1,0 +1,38 @@
+{
+  "name": "superthreads",
+  "version": "1.0.0",
+  "description": "High-performance multithreading utilities for Node.js using worker_threads — simplified and optimized.",
+  "main": "index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "lib/"
+  ],
+  "keywords": [
+    "threads",
+    "worker_threads",
+    "thread-pool",
+    "multithreading",
+    "concurrency",
+    "parallel",
+    "async",
+    "nodejs",
+    "performance"
+  ],
+  "author": "ZygoteCode",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZygoteCode/superthreads.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZygoteCode/superthreads/issues"
+  },
+  "homepage": "https://github.com/ZygoteCode/superthreads#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
