@@ -1,9 +1,9 @@
-# ⚡️ Threadify — Effortless Multithreading for Node.js
+# ⚡️ Superthreads — Effortless Multithreading for Node.js
 
 > 🧵 High-performance, elegant multithreading utilities built on top of Node.js `worker_threads`.
 > 🚀 Simplify concurrency, scale effortlessly, and run code in parallel like a pro.
 
-![npm](https://img.shields.io/npm/v/threadify?color=brightgreen)
+![npm](https://img.shields.io/npm/v/superthreads?color=brightgreen)
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)
 ![build](https://img.shields.io/badge/status-stable-success)
@@ -25,13 +25,13 @@
 ## 📦 Installation
 
 ```bash
-npm install threadify
+npm install superthreads
 ```
 
 or
 
 ```bash
-yarn add threadify
+yarn add superthreads
 ```
 
 ---
@@ -41,7 +41,7 @@ yarn add threadify
 ### 🧵 Simple Thread
 
 ```js
-const { Thread } = require('threadify');
+const { Thread } = require('superthreads');
 
 (async () => {
   const result = await Thread.run((n) => n * 2, 21);
@@ -54,7 +54,7 @@ const { Thread } = require('threadify');
 ## ⚙️ ThreadPool Example
 
 ```js
-const { ThreadPool } = require('threadify');
+const { ThreadPool } = require('superthreads');
 const path = require('node:path');
 
 const pool = new ThreadPool(4, { imports: ['fs/promises'] });
@@ -106,7 +106,7 @@ main().catch(console.error);
 Keep a thread alive and reuse it for multiple tasks:
 
 ```js
-const { ReusableThread } = require('threadify');
+const { ReusableThread } = require('superthreads');
 
 (async () => {
   const thread = new ReusableThread();
@@ -128,7 +128,7 @@ const { ReusableThread } = require('threadify');
 Run multiple reusable threads efficiently:
 
 ```js
-const { ThreadPoolReusable } = require('threadify');
+const { ThreadPoolReusable } = require('superthreads');
 
 const pool = new ThreadPoolReusable(4);
 
@@ -136,11 +136,11 @@ const pool = new ThreadPoolReusable(4);
   const tasks = [
     pool.run((n) => n * 2, 10),
     pool.run((n) => n + 5, 37),
-    pool.run((s) => s.toUpperCase(), 'threadify')
+    pool.run((s) => s.toUpperCase(), 'superthreads')
   ];
 
   const results = await Promise.all(tasks);
-  console.log('Results:', results); // [20, 42, "THREADIFY"]
+  console.log('Results:', results); // [20, 42, "SUPERTHREADS"]
 
   await pool.terminate();
 })();
@@ -153,7 +153,7 @@ const pool = new ThreadPoolReusable(4);
 Automatically scale threads based on demand:
 
 ```js
-const { AutoScalingPool } = require('threadify');
+const { AutoScalingPool } = require('superthreads');
 
 const autoPool = new AutoScalingPool({ min: 2, max: 8 });
 
@@ -176,7 +176,7 @@ const autoPool = new AutoScalingPool({ min: 2, max: 8 });
 Cancel a task before it completes:
 
 ```js
-const { Thread, AbortToken } = require('threadify');
+const { Thread, AbortToken } = require('superthreads');
 
 (async () => {
   const controller = new AbortToken();
@@ -225,7 +225,7 @@ console.log(pool.stats());
 
 ---
 
-## 🔥 Why Threadify?
+## 🔥 Why Superthreads?
 
 * Zero dependencies
 * Simple, readable API
