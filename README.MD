@@ -176,7 +176,7 @@ const autoPool = new AutoScalingPool({ min: 2, max: 8 });
 ```js
 'use strict';
 const path = require('node:path');
-const { AutoScalingPoolReusable } = require('../lib/autoScalingPoolReusable');
+const { AutoScalingPoolReusable } = require('superthreads');
 
 const pool = new AutoScalingPoolReusable({
   min: 2,
