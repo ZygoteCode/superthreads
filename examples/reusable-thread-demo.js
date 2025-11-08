@@ -1,4 +1,4 @@
-const { ReusableThread } = require('../index');
+const { ReusableThread } = require('../lib/reusableThreadPool');
 
 (async () => {
   const thread = new ReusableThread({ imports: [] });

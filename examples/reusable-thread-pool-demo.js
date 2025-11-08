@@ -23,7 +23,7 @@ async function main() {
   pool.on('threadError', console.error);
 
   const res = await t;
-  console.log('result', res);
+  console.log('result', res.value);
 
   await pool.shutdown();
 }
