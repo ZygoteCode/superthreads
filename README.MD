@@ -16,6 +16,7 @@
 * 🧩 **ThreadPool** — Manage multiple threads efficiently with queuing and priorities.
 * 🔁 **ReusableThread** — Keep a worker alive and reuse it for multiple tasks.
 * ⚙️ **ThreadPoolReusable** — Hybrid pool using reusable threads.
+* ⚙️ **AutoScalingPoolReusable** — Hybrid pool using reusable threads, dynamically scales workers up or down based on load with re-use logic.
 * 📈 **AutoScalingPool** — Dynamically scales workers up or down based on load.
 * 🚩 **AbortToken** — Graceful task cancellation support.
 * 🧰 **Task** — Promise-like task wrapper with additional metadata.
